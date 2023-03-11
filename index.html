@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        Digite seu prato de comida:
+        <input type="text" id="prato"><br>
+        Digite sua bebida:
+        <input name="bebida" id="bebida"><br>
+        Digite sua sobremesa:
+        <input name="sobremesa" id="sobremesa"><br>
+        <br>
+        <button onclick="calcula();return false;">Calcular</button>
+        <!-- <button onclick="calcula();return false;">Calcular</button> -->
+        <br>
+        <input type="reset" value="limpar formulario"></input>
+        <br>
+        <br>
+        <div id="respostaComida"> </div><br>
+        <div id="respostaBebida"> </div><br>
+        <div id="respostaSobremesa"> </div><br>
+        <div id="respostaTotal"> </div><br>
+    </form>
+
+</body>
+
+</html>
+<script>
+    function calcula() {
+        let calculaPrato = parseInt(document.getElementById("prato").value);
+        if (calculaPrato == 1) {
+            let valorComida = "o prato é vegetariano 180kl";
+            //alert = (valorComida);
+            respostaComida.innerHTML = valorComida;
+        } else if (calculaPrato == 2) {
+            let valorComida = "o prato é peixe 230kl";
+            respostaComida.innerHTML = valorComida;
+        } else if (calculaPrato == 3) {
+            let valorComida = "o prato é frango 250kl";
+            respostaComida.innerHTML = valorComida;
+        } else if (calculaPrato == 4) {
+            let valorComida = "o prato é carne 350kl";
+            respostaComida.innerHTML = valorComida;
+        } else {
+            let valorComida = "o prato invalido";
+            respostaComida.innerHTML = valorComida;}
+        
+
+        let calculaBebida = parseInt(document.getElementById("bebida").value);
+        if (calculaBebida == 1) {
+            let valorBebida = "a bebida é chá 20kl";
+            respostaBebida.innerHTML = valorBebida;
+        } else if (calculaBebida == 2) {
+            let valorBebida = "a bebida é suco de laranja 70kl";
+            respostaBebida.innerHTML = valorBebida;
+        } else if (calculaBebida == 3) {
+            let valorBebida = "a bebida é suco de melão 100kl";
+            respostaBebida.innerHTML = valorBebida;
+        } else if (calculaPrato == 4) {
+            let valorBebida = "a bebida é refrigerante diet 65kl";
+            respostaBebida.innerHTML = valorBebida;
+        } else {
+            let valorBebida = "bebida invalida";
+            respostaBebida.innerHTML = valorBebida;
+        }
+    
+
+
+    let calculaSobremesa = parseInt(document.getElementById("sobremesa").value);
+    if (calculaSobremesa == 1) {
+        let valorSobremesa = "a sobremesa é abacaxi 75kl";
+        respostaSobremesa.innerHTML = valorSobremesa;
+    } else if (calculaSobremesa == 2) {
+        let valorSobremesa = "a sobremesa é sorvete diet 110kl";
+        respostaSobremesa.innerHTML = valorSobremesa;
+    } else if (calculaSobremesa == 3) {
+        let valorSobremesa = "a sobremesa é mouse diet 170kl";
+        resposta.innerHTML = valorSobremesa;
+    } else if (calculaSobremesa == 4) {
+        let valorSobremesa = "a sobremesa é mouse de chocolate 200kl";
+        respostaSobremesa.innerHTML = valorSobremesa;
+    } else {
+        let valorSobremesa = "sobremesa invalida";
+        respostaSobremesa.innerHTML = valorSobremesa;
+    }
+
+    
+
+    }
+
+</script>
